@@ -1,0 +1,33 @@
+%=====================
+\chapter{Hilfreiche Erkenntnisse für die weitere Softwareentwicklung}\label{app_1}
+%=====================
+\section{Debugging}
+\label{debug}
+%=====================
+Debugging ist einer der teuersten Schritte in der Softwareentwicklung und nimmt einen Großteil der Kosten ein, die die Entwicklung kosten.
+
+Unter diesem Aspekt habe ich die im ROS-Framework implementierte \quotes{rosconsle} sehr zu schätzen gelernt.
+Sie bietet ein umfangreiches Set an Nachrichten-Levels (\quotes{verbosity}).
+
+\begin{table}
+\begin{center}
+\begin{tabular}{p{3cm}  p{10cm}}
+\textbf{Level} & \textbf{Beschreibung} \\ \hline	
+	DEBUG & Nachrichten, die man nie sehen muss, wenn das Programm ordnungsgemäß läuft  \\ \hline
+	INFO & Kleine Mengen an Informationen, die für den Anwender nützlich sind \\ \hline
+	WARN & Informationen, die den Nutzer beunruhigen und die Ausgabe des Programms verändern können, aber im erwarteten Rahmen der Programmfunktion liegen \\ \hline
+	ERROR & Ein ernster Fehler ist aufgetreten, aber das System kann sich von dem Fehler wieder erholen \\ \hline
+	FATAL & Ein ernster Fehler ist aufgetreten und die Funktion kann nicht wiederhergestellt werden \\ 
+
+\end{tabular}
+\end{center}
+\caption{\label{debugVerbosity}In der Tabelle werden die verschieden Debug-Levels beschrieben }
+\end{table}
+Ein weiteren Vorteil bringen benannte Logger-Nachrichten. 
+Damit kann man später Filter einrichten. 
+Am besten sieht man es am Beispiel:
+
+\begin{verbatim}
+ROS_DEBUG_NAMED_STREAM("task.step","Value is:"<<x);
+\end{verbatim}
+

@@ -1,0 +1,60 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pseudocode Richtlinien des FG Neuroinformatik
+% 11.02.04 1. Version (Torsten Wilhelm)
+% 14.1.2008 ergänzt um fettgedruckte Matrizen  (Sven Hellbach, Klaus Debes)
+% 24.1.08 Bildunterschrift für Pseudocode an NIcaption angepasst - damit auch Schriftart
+% \ttfamily aus der allgemeinen Umgebung rausgenommen und lokal eingesetzt (Sven, Klaus)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{ifthen}
+
+% redefinitionen ********************************************************
+\renewcommand{\vec}[1]{\mathbf{#1}}              % fettgedruckte Vektoren
+\newcommand{\veki}[1]{\underline{#1}}
+\newcommand{\NImat}[1]{\mathbf{#1}}              % fettgedruckte Matrix
+\newlength{\codeindent}
+\setlength{\codeindent}{5mm}
+
+\newcounter{codeline}
+\newcommand{\showcodeline}{\makebox[0.7cm][r]{\hfill {\ttfamily \arabic{codeline}}} \hspace{0.5cm} \stepcounter{codeline}}
+
+% code umgebung *********************************************************
+\newenvironment{code}
+{
+ \begin{figure}[ht!]
+ \hrule
+ \vspace{0.5cm}
+ \footnotesize %\ttfamily
+ \setcounter{codeline}{1}
+
+ \newcommand{\commentline}[1]{\makebox[1.2cm]{} {\sl /* ##1 */ }\\}
+ \newcommand{\comment}[1]{\makebox[0.1cm]{} \hfill \ifthenelse{\equal{##1}{}}{}{{\sl // ##1}} \\}
+}
+{ \end{figure}}
+
+% Eingaben
+\newenvironment{codeinput}
+{{\noindent \normalfont \bf Eingaben}\\
+    \renewcommand{\input}[2]{\showcodeline {\ttfamily ##1} \comment{##2} }
+}{}
+
+% Initialisierungen
+\newenvironment{codeinitialize}
+{{\noindent \normalfont \bf Initialisierung}\\
+    \newcommand{\assignment}[3]{\showcodeline {\ttfamily ##1} $\leftarrow$ ##2 ; \comment{##3} }
+}{}
+
+% Beschreibung des Algorithmus
+\newenvironment{codealgorithm}
+{\begin{sloppypar}
+{\noindent \normalfont \bf Algorithmus}\\
+    \renewcommand{\label}[2]{{\bf ##1:} \hfill {\bf // ##2}\\}
+    \newcommand{\goto}[3]{\showcodeline \hspace*{##1\codeindent}{\bf goto ##2} \comment{##3} }
+    \newcommand{\command}[3]{\showcodeline \hspace*{##1\codeindent}{\ttfamily##2;} \comment{##3} }
+}{\end{sloppypar}}
+
+% Ausgaben
+\newenvironment{codereturn}
+{{\noindent \normalfont \bf Rückgabe}\\
+   \renewcommand{\output}[2]{\showcodeline {\ttfamily ##1} \comment{##2} }
+}{ \vspace{0.3cm} \hrule}

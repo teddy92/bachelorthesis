@@ -1,0 +1,39 @@
+\input{style}
+\newcommand{\quotes}[1]{``#1''}
+%\makeglossaries
+\makenoidxglossaries
+
+\input{glossaries}
+
+
+\begin{document}
+	
+    \frontmatter
+    \pagestyle{empty}
+    \input{titel}
+    \setcounter{page}{0}
+    \tableofcontents
+    \mainmatter
+    \setcounter{page}{1}
+    \pagestyle{plain}
+
+    \input{chapter/einleitung}
+    \input{chapter/inhalt}
+    \input{chapter/merkmalsextraktion}
+    \input{chapter/ergebnisse}
+    \input{chapter/ausblick}
+    \input{chapter/zusammenfassung}
+
+    \begin{appendix}
+    %\input{anhang}
+    \end{appendix}
+
+    \backmatter
+    \listoffigures
+    \printnoidxglossaries
+    \bibliographystyle{gerapali}    % für engl. Versionen nur "apalike", deutsch: gerapali plus package "bibgerm" im DA-style-File!
+    \addcontentsline{toc}{chapter}{\bibname}
+    
+    \inputthesen
+
+\end{document}

@@ -1,0 +1,305 @@
+\chapter{Einleitung}
+%===================
+Zunächst einige prinzipielle Bemerkungen: die folgenden Hinweise sind kein Dogma, sondern
+als Hilfestellung bei der Abfassung von Bachelor-, Master- und Diplomarbeiten gedacht. Ihrer Kreativität sollen
+also keinesfalls Grenzen gesetzt werden.
+
+Aufbau und Struktur einer Arbeit sind abhängig vom bearbeiteten Thema mehr oder weniger
+verschieden. Die nachfolgend angegebene Struktur kann aber als relativ allgemeingültig
+angesehen werden.
+
+Versuchen Sie, möglichst viel mit aussagekräftigen Abbildungen zu
+operieren und den Text entsprechend zu strukturieren (Aufzählungen
+Absätze, Zwischenüberschriften). Nichts ist schlimmer für den
+Lesenden als mehrere aufeinander folgende Seiten Fließtext.
+Insbesondere bei der Darstellung mathematischer Zusammenhänge sind
+illustrierende Grafiken angebracht.
+\\
+
+Achten Sie darauf, dass die angegebenen Gleichungen in der
+Notation angegeben werden, die Sie a) aus unseren Vorlesungen
+kennen und b) vor allem konsistent über die ganze Arbeit hinweg
+sind. Die Verwendung einer möglichst einheitlichen mathematischen Notation in Forschung und Lehre am
+Fachgebiet NI\&KR dient der Verständlichkeit auch über die Grenzen der Thematik hinweg
+und der Transparenz der Arbeit auch für Andere.
+Die Notation orientiert sich an der im Ingenieurwesen im Allgemeinen und in der Neuroinformatik im Speziellen
+üblichen Schreibweise (siehe Beispiele unten). Eine vollständige Übersicht ist der Formelsammlung NI
+zu entnehmen.
+
+\begin{tabular}{p{0.2\hsize}p{0.75\hsize}}
+$\vec{x}, \vec{y},  \vec{w}$
+               &  einheitliche Schreibweise für Vektoren als Spaltenvektoren \\
+$\vec{x}^T$            &  $ = (x_1, \ldots, x_n)$,
+                          transponierter Vektor \\
+$\vec{X}, \vec{W}$       &  einheitliche Schreibweise für Matrizen \\
+$\vec{W}^T$            &  Transponierte Matrix von $\vec{W}$  \\
+$\vec{x}$                & Inputvektor:  $\vec{x}^T = (x_1, \ldots, x_j,  \ldots, x_n)$ \\
+$\vec{z}$                & Zustandsvektor: $\vec{z}^T = (z_1, \ldots, z_i,  \ldots, z_m)$ \\
+$\vec{y}$                & Outputvektor: $\vec{y}^T = (y_1, \ldots, y_i,  \ldots, y_m)$ \\
+$\vec{t}$                & Teachervektor: $\vec{t}^T = (t_1, \ldots, t_i,  \ldots, t_m)$ \\
+$\vec{y}^{(l)}$        & Outputvektor der Neuronenschicht ({\em l}) \\
+$w_{ij}$               & Einzelnes Gewicht in Empfänger-Sender-Notation \\
+$\vec{w}_i$            & Vektor der Gewichte zum Empfänger-Neuron $i$
+                        mit $\vec{w}_i^T = (w_{i1}, \ldots, w_{ij},  \ldots, w_{in})$ \\
+$\vec{W}$                & Matrix der Gewichte $(w_{ij})$ aller $m$ Neuronen, mit \\
+                       & $\vec{W} = \left(
+                    \begin{array}{ccc}
+                    w_{11} & \cdots  &  w_{1n} \\
+                    \vdots &         & \vdots \\
+                    w_{m1} & \cdots  & w_{mn} \\
+                    \end{array}
+                    \right)
+                      = \left(
+                    \begin{array}{c}
+                    \vec{w}_1^T \\
+                    \vdots \\
+                    \vec{w}_m^T \\
+                    \end{array}
+                    \right)        $ \\
+$\vec{W}^{(l)}$                & Matrix der Gewichte $(w_{ij}^{(l)})$ aller
+                               Neuronen der Schicht $l$ eines Netzes \\
+$\vec{r}$               & Positionsvektor eines Empfänger-Neurons in einer n-dim. Neuronenkarte\\
+$\vec{s}$               & Positionsvektor des Inputs im m-dim. Inputsignalraum\\
+$w_{\veki{r} \veki{s}}$ & Einzelnes Gewicht zwischen Neuronenkarte und
+                          Inputsignalraum in verallgemeinerter Empfänger-Sender
+                          Notation\\
+$\vec{x}^p $          & $ = (x_1, x_j, \ldots, x_n)^T$,
+                        p-ter Inputvektor aus dem Inputdatensatz $\vec{X}$ \\
+$\vec{X}$             & $=(\vec{x}^1, \vec{x}^p, \ldots, \vec{x}^N) $,
+                        Inputdatensatz, d.h.
+                         Menge aller $N$ Input\-vektoren $\vec{x}^p $\\
+$\vec{t}^p$           & $  = (t_1, t_i, \ldots, t_m)^T$,
+                        p-ter Teachervektor aus dem Teacherdatensatz $\vec{T}$ \\
+$d(\vec{x}, \vec{w}_i)$&  abstraktes Abstandsmaß zwischen $\vec{x}$ und $\vec{w}_i$ \\
+$\vec{y}(t)$ oder $\vec{y}^{(t)}$ & zeitkontinuierliche Schreibweise\\
+$\vec{y}(k)$ oder $\vec{y}^{(k)}$ & zeitdiskrete Schreibweise\\[3mm]
+\end{tabular}
+
+Von dieser Schreibweise soll in der Wahl der Bezeichner (x, y, w usw.)
+nur dann abgewichen werden, wenn das bearbeitete Theoriefeld eine eigene,
+allgemein verbreitete und akzeptierte Notation besitzt (z.B. Bayes-Filter). Dies ist unbedingt vorher
+mit dem Betreuer abzustimmen. Die Schreibweise für Vektoren, Matrizen und Skalare soll sich dennoch
+an der Vorgabe orientieren.
+
+Unter Umständen kann es sinnvoll sein, nach dem
+Inhaltsverzeichnis oder am Ende der Arbeit ein Glossar
+einzufügen, das die Erläuterung für Formelzeichen oder im
+Sprachgebrauch seltene Begriffe bzw. spezielle Fachtermini
+enthält.
+\\
+
+\begin{figure}
+\begin{center}
+  \includegraphics[width=1\hsize]{costly}
+  \NIcaption{Kurzbeschreibung - dieser Text erscheint auch im Abb.-verzeichnis}{Jede Abbildung soll mit einer aussagekr"aftigen(!) Bildunterschrift
+  versehen werden. Beherzigen Sie immer folgenden Grundsatz: Der Text muss so formuliert sein, das klar wird: was generell gezeigt wird,
+  worauf beim Leser Wert gelegt werden soll, welche Probleme verdeutlicht werden sollen. Eine Bildunterschrift muss also stets weitestgehend
+  selbsterklärend sein und darf für ein generelles Verständnis nicht das Lesen des Textes zwingend erforderlich machen!
+  Weiterhin soll im Fließtext an entsprechender Stelle auf die Abbildung Bezug genommen werden, um den Zusammenhang zwischen Text und Illustration
+  deutlich zu machen. (Dieser Text steht NICHT im Abb.-verzeichnis)}
+  \label{figure1}
+\end{center}
+\end{figure}
+
+Die Kerngedanken Ihrer Thematik sollten sich wie ein roter Faden durch die Arbeit
+ziehen. Das bedeutet, dass diese immer wieder aufgegriffen werden. Damit vermeidet
+man, dass der Leser nach einer längeren Passage die Zielrichtung der Arbeit verliert.
+
+Wünschenswert ist, dass die einzelnen Kapitel schlüssig aufeinander folgen. Neben
+der entsprechenden Gesamtstruktur sind hier motivierende Überleitungen, Kapiteleinleitungen und
+Kapitelzusammenfassungen in jedem neuen Kapitel hilfreich, damit der rote Faden der Arbeit und der gedankliche Ablauf deutlich werden.
+
+Verwenden Sie ruhig Vorwärts- und Rückwärtsreferenzen, als Vorgriff auf noch kommende Erläuterungen bzw. als
+Querverweis auf bereits gegebene Erläuterungen. Wenn zwischen Ersterläuterung und Nutzung eines Begriffes/Verfahrens
+größere Spannen liegen, sollte eine erneute kurze Erläuterung gegeben werden, um den roten Faden nicht abreißen zu lassen.
+Insgesamt ist ein gewisses Maß an Wiederholung durchaus zulässig und hilfreich, dem Leser (der möglichst leicht
+die Arbeit oder Ausschnitte daraus erfassen können soll) das Verständnis und die Verfolgung der Arbeit zu erleichtern.
+\\
+
+Zur Einleitung selbst: Hier steht im Umfang von etwa einer Seite die Einordnung der
+DA-Thematik. Benannt werden sollten die prinzipielle Zielstellung der Arbeit, ohne
+bereits auf die verwendeten Methoden detailliert einzugehen. In welche laufenden
+Forschungsarbeiten ordnet sich die Arbeit ein? Auf welche Vorarbeiten wird Bezug
+genommen? Welche Fragestellungen bilden die wesentliche Motivation für die Arbeit?
+
+Im letzten Teil der Einleitung erfolgt ein Grobüberblick über die Arbeit, d.h. es
+werden die einzelnen Kapitel und deren inhaltliche Schwerpunkte benannt.
+
+
+\chapter{State of the Art}
+%=========================
+Wie der Name schon sagt: was gibt es bereits im Kontext der bearbeiteten Thematik?
+Welche Methoden und Verfahren sind zur Lösung der Aufgabe in Betracht zu ziehen?....
+
+\vspace{1cm}
+
+Die Grundlagen des Roboterfußball werden in \cite{bayesstatistik}, \cite{dissanayake2001} und
+\cite{thrun00j} anschaulich dargestellt....
+
+\vspace{1cm}
+
+Welche Stärken und Schwächen weisen
+diese vor dem Hintergrund der konkreten Aufgabenstellung auf? Nach der Einleitung
+und dem State of the Art sollte für den Leser klar sein, wo die methodischen
+Schwerpunkte der Arbeit liegen und an welchen Stellen eine Verbesserung /
+Erweiterung des aktuellen Kenntnis- bzw. Entwicklungsstandes angestrebt wird.
+
+Weiterhin ist der State of the Art wichtig, damit Sie Ihre eigenen Ergebnisse
+vernünftig einordnen und kritisch werten / diskutieren können. Damit wird erreicht,
+dass der Leser / Gutachter Ihren eigenen methodischen Beitrag objektiv einschätzen
+und bewerten kann.
+\newpage
+
+Für die Recherche stehen folgende Quellen zur Verfügung und sollten vorrangig genutzt werden:
+\begin{itemize}
+\item{Elektronische Konferenzproceedings-Datenbank des FG NI\&KR}
+\item{Literaturdatenbank des FG NI\&KR (mit der Literaturbasis aller Studien-, Diplom-, Bachelor- und Masterarbeiten des
+FG)}
+\item{Recherche mittels IEEE Explore (nur aus dem Uni-Netz bzw. via VPN) im Bestand der IEEE Journale
+und Konferenzen (Hinweis: allerdings werden über dieses IEEE-basierte System nur ca. 40\%
+der relevanten wiss. Publikationen erfasst; Elsevier, Springer, ACM etc. werden nicht erfasst!)}
+\end{itemize}
+
+Die Suche mittels Google und anderer Suchmaschinen im gesamten Internet sollte nur als ergänzende Strategie verwendet werden!
+
+\chapter{Theoretische Gundlagen}
+%===============================
+In diesem Kapitel werden die für das Verständnis der Arbeit notwendigen
+theoretischen Grundlagen abgehandelt. Hier gehören keine Allgemeinplätze hin, wie
+z.B. die Beschreibung des Error-Backpropagation-Algorithmus. Es sollte letztlich mit
+dem Betreuer abgestimmt werden, was in dieses Kapitel aufgenommen werden soll und
+was nicht.
+
+\begin{eqnarray}
+G(y_j)=\left|E\left\{y_j^4\right\}-3\left(E\left\{y_j^2\right\}\right)^2\right|
+   =\left|E\left\{\left(\vec{w}_j^T \vec{x}\right)^4\right\}-
+   3\left(E\left\{\left(\vec{w}_j^T \vec{x}\right)^2\right\}\right)^2\right|
+   \label{eq:Gy}
+\end{eqnarray}
+
+Formeln sollen (evtl. kapitelweise) durchlaufend numeriert werden und auch hier sollte wieder im Text
+auf die jeweilige Formel Bezug genommen werden:
+
+\vspace{1cm}
+
+Formel \eqref{eq:Gy} zeigt die Berechnung ...
+
+\vspace{3cm}
+
+Die beiden nachfolgenden Kapitel stellen nun den Hauptteil der Arbeit dar!
+
+\chapter{\glqq Mein Algorithmus\grqq}
+%====================================
+
+Hier erscheint in möglichst anschaulicher Form die Beschreibung Ihres eigenen
+methodischen Teils. Es muss klar herausgearbeitet werden, auf welchen Vorleistungen
+aufgesetzt und was durch den Bearbeiter selbst erarbeitet wurde.
+
+Verwenden Sie insbesondere Pseudocode-Darstellungen.
+\begin{itemize}
+\item Die Verwendung von Pseudocode dient der Erhöung der
+      Verständlichkeit der behandelten Materie
+      sowie zur Verdeutlichung der konkreten algorithmischen Umsetzung des betreffenden Teilaspekts
+      im Rahmen der Arbeit. Sie ist damit von großer Bedeutung für die Nachhaltigkeit der Arbeit.
+\item Insofern ist unter Pseudocode weder ein Programmlisting noch
+      ein umgeschriebenes Programm zu verstehen, auch nicht
+      eine Aneinanderreihung von Prozedur- oder Funktionsaufrufen.
+\item Pseudocode soll sich in den normalen Fließtext der Arbeit im
+      betreffenden Abschnitt nahtlos integrieren
+      und die behandelte Mathematik sowie deren verbale Beschreibung ergänzen -
+      um den sonst nur im Programmcode zu findenden Aspekt der konkreten
+      algorithmischen Umsetzung. Dies ist das Salz in der Suppe! Ohne diese Details ist die
+      gefundene Lösung meist nicht exakt {\bf reimplementierbar} und damit für das Fachgebiet nicht nutzbar.
+      Ziel ist also stets eine Darstellung, die eine Reimplementierung erlaubt.
+\item Es empfielt sich, im Pseudocode dieselben mathematischen
+      Bezeichner wie in den Formeln zu verwenden, um klare
+      Bezüge herzustellen.
+\item Der Pseudocode an einer betreffenden Stelle soll jeweils nur
+      den gerade erläuterten
+      Teilaspekt untersetzen. Die Arbeit und die mathematische Umsetzung soll auch ohne Pseudocode
+      verständlich sein - mit Pseudocode sollen aber auch die Tricks und Besonderheiten vermittelt werden.
+      Insofern soll sich der Pseudocode vom laufenden Text durch eine kleinere Schriftgröße, einen anderen Schriftfont
+      und die Einbettung in Trennlinien abheben (siehe Beispiel), so dass man ihn auch bei Bedarf überspringen kann.
+\end{itemize}
+
+\newpage
+
+{\bf Beispiel mit Einbettung in den Fließtext:} Das Prinzip
+des Boosting-Algorithmus wurde bereits oben erläutert. Nachfolgend
+sollen die wichtigsten algorithmischen Details verdeutlicht
+werden:
+
+
+\begin{code}
+
+\begin{codeinput}
+\input{$Z = \{(x_1, y_1),\dots,(x_N,y_N)\}$}{$N$ Trainingsbeispiele}
+\input{$N = a + b$}{$a$ Beispiele mit $y_i = +1$}
+\comment{$b$ Beispiele mit $y_i = -1$}
+\end{codeinput}
+
+\begin{codeinitialize}
+\assignment{$w_i^{(0)}$}{$\frac{1}{2a}$}{für $y_i = +1$}
+\assignment{$w_i^{(0)}$}{$\frac{1}{2b}$}{für $y_i = -1$}
+\end{codeinitialize}
+
+\begin{codealgorithm}
+% Step 1
+\label{Label 1}{Fortschreitende Inklusion}
+\command{1}{Update $w_i^{(M)}$ mit $exp(-y_i H_M(x_i)$}{}
+\command{1}{normalisiere zu $\sum_i w_i^{(M)} = 1${}}{}
+\label{Label 2}{Bedingter Ausschluss}
+\command{1}{$h' = argmin_{h \in K_M}(H_M - h)$}{}
+\command{1}{Wenn $(H_M - h') < \epsilon_min$ , dann}{}
+\goto{2}{Label 2}{}
+\command{1}{sonst}{}
+\goto{2}{Label 1}{}
+\end{codealgorithm}
+
+\begin{codereturn}
+\output{ $H(x) = sign[\sum_{h(x)\in K_M}h(x)] $ }{Ergebniswert}
+\end{codereturn}
+
+
+\NIcaption{Bildunterschrift Pseudocode}{Ausschnitt aus dem
+Pseudocode für einen Float-Boost Algorithmus}
+\end{code}
+
+
+
+
+
+\chapter{Experimentelle Untersuchungen}
+%======================================
+Experimentelle Untersuchungen und Ergebnisse untermauern die
+Funktionsweise der von Ihnen entwickelten / implementierten
+Verfahren und Methoden. Insbesondere soll hier deutlich werden, wo
+die Stärken / Schwächen der Verfahren liegen und wie die Einordnung
+in vergleichbare Ansätze aussieht. Wesentlich ist hier, dass es ein
+schlüssiges und klares Versuchskonzept gibt.
+\begin{table}
+\centering
+\begin{tabular}{|c||c|c|c|c|c|c|c|} \hline
+& \multicolumn{7}{c|}{\bf Testproblem}\\\hhline{|~||-------|}
+{\bf Bilder}&A&B&C&D&E&F&\\\hline
+Original&0.12121&0.28788&0.14394&0.08081&0.34091&0.00000&0.1625\\\hline
+C2-Schicht&0.03535&0.12374&0.03030&0.05556&0.25000&0.00505&0.0833\\\hline
+\end{tabular}
+\caption{\label{beispiel}Experimentelle Ergebnisse lassen sich oft besonders anschaulich in
+Form von Tabellen darstellen. Auch Tabellen sollten immer mit einer erläuternden Unterschrift
+versehen werden.}
+\end{table}
+
+
+\chapter{Zusammenfassung und Ausblick}
+%=====================================
+
+\section{Zusammenfassung}
+%------------------------
+Die Zusammenfassung resümiert die wesentlichen Ergebnisse der Arbeit und bewertet diese: Wurden die
+gestellten Anforderungen erreicht? Wenn nicht: wo lagen die Ursachen?
+
+\section{Weiterführende Arbeiten}
+%--------------------------------
+Welche Möglichkeiten zur Verbesserung bieten sich zum aktuellen
+Zeitpunkt an?

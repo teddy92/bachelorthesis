@@ -1,0 +1,90 @@
+%%%Dokumentklasse
+\documentclass[12pt,twoside,fleqn]{book}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\graphicspath{ {img/} }	
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{calc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}           % einige weitere Sonderzeichen
+\usepackage{subfigure}          % erlaubt das Anordnen von Bildern nebeneinander mit einzelnen Bildunterschriften
+                                % einfacher, als mit Tabellen und Boxen zu arbeiten
+\usepackage{ngerman}
+\usepackage{bibgerm}            % Stylefile für deutsche Literaturstellenangabe
+\usepackage[T1]{fontenc}        % saubere Trennung von Wörtern mit Umlauten
+\usepackage[utf8]{inputenc}   % direkte Eingabe von Umlauten
+\usepackage{fancyhdr}
+\usepackage{colortbl}
+\usepackage{hhline}
+\usepackage[bf]{caption}
+\usepackage[noadjust]{cite}     % erlaubt Zeilenumbruch innerhalb von Zitierungen, Option noadjust verhindert
+                                % automatische Leerzeichen um die Referenz, was am Zeilenanfang zu Problemen führt
+\usepackage{hyperref}           % erlaubt die Nutzugn von \url
+\usepackage{code}          % Style vom Fachgebiet NIKR für Pseudocode-Darstellung
+
+%\usepackage{pdfpages}
+\usepackage[xindy,toc]{glossaries}
+\sloppy
+
+\usepackage{placeins}
+% === Längen und Abstände ==================================================
+
+% horizontales Layout
+\setlength{\oddsidemargin}{0.2in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\textwidth}{\paperwidth - 2.2in}
+
+% vertikales Layout
+%\setlength{\topskip}{0.0cm}
+\setlength{\headheight}{15.1pt}
+%\setlength{\headsep}{0.0cm}
+\setlength{\topmargin}{0.0cm}
+\setlength{\footskip}{0.6in}
+\setlength{\textheight}{\paperheight - 2.0in}
+\addtolength{\textheight}{-1.0\headheight}
+\addtolength{\textheight}{-1.0\headsep}
+\addtolength{\textheight}{-1.0\footskip}
+
+% Zeilenabstand
+\renewcommand{\baselinestretch}{1.5}
+
+\setlength{\topsep}{0.3cm}
+\setlength{\mathindent}{1.0cm}
+\setlength{\parindent}{0.0cm}
+
+% === Bildunterschrift ========================================================
+
+\renewcommand{\captionfont}{\small}
+\newcommand{\NIcaption}[2]{\caption[#1]{#1\protect\\ \emph{#2}}}
+\setcaptionmargin{0.75cm}
+%\renewcommand{\topfraction}{0.95}
+%\renewcommand{\textfraction}{0.05}
+%\renewcommand{\textfloatsep}{1.0cm}
+
+% === Seitenstil ==============================================================
+
+\pagestyle{fancy}
+\fancyhead[ER]{\itshape\leftmark}
+\fancyhead[OL]{\itshape\rightmark}
+\fancyhead[EL,OR]{\thepage}
+\fancyfoot[ER,OL]{\small \invNumText}
+%\fancyfoot[ER,OR]{\invNumText}
+%\fancyfoot[EL,OL]{\myName}
+\fancyfoot[EC,OC]{}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{
+\fancyhead[ER]{\itshape\leftmark}
+\fancyhead[OL]{\itshape\rightmark}
+\fancyhead[EL,OR]{\thepage}
+\fancyfoot[ER,OL]{\small \invNumText}
+%\fancyfoot[ER,OR]{\invNumText}
+%\fancyfoot[EL,OL]{\myName}
+\fancyfoot[EC,OC]{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}}
+
+\input{settings.tex}

@@ -1,0 +1,200 @@
+\newglossaryentry{master}
+{
+  name={master},
+  description={Der Master ist die zentrale Einheit in ROS. Er liefert Namens- und Registrierungsdienste für \Glspl{node}. 
+  Ausserdem ermöglicht er, dass sich \Glspl{node} untereinander erkennen und miteinander kommunizieren können},
+  plural={mastern}
+}
+
+\newglossaryentry{node}
+{
+  name={node},
+  description={Ein einzelner Node stellt eine bestimmte Funktionalität innerhalb des ROS dar. 
+  Ein Node kann sogenannte \Glspl{topic} abonnieren(\gls{subscribe}), wodurch er z.B. einen Laserscan erhält. 
+  Genauso kann er selbst \Glspl{topic} veröffentlichen (\gls{publish})},
+  plural={nodes}
+}
+
+\newglossaryentry{subscribe}
+{
+  name={subscribe},
+  description={Bezeichnet den Vorgang eines \Gls{node}s, ein bestimmtes \glspl{topic} zu abonnieren, um alle Nachrichten aus diesem zu empfangen.
+  Jedes Abonnement eines \Gls{topic}s erhält eine eigene Warteliste, in dem eine Kopie der empfangenen \Glspl{message} vorgehalten wird, bis diese gelesen oder verworfen werden}
+}
+
+\newglossaryentry{publish}
+{
+  name={publish},
+  description={Gegenstück zu \gls{subscribe}.
+  Der Vorgang, bei dem Nachrichten auf einem bestimmten \gls{topic} veröffentlich werden}
+}
+
+\newglossaryentry{topic}
+{
+  name={topic},
+  description={Ist eine Verbindung, über die Nachrichten veröffentlicht (\gls{publish}) oder abonniert (\gls{subscribe}) werden können},
+  plural={topics}
+}
+
+\newglossaryentry{message}
+{
+  name={message},
+  description={Ros messages sind Benutzerdefinierbare Datenstrukturen die über \Glspl{topic} versendet werden können},
+  plural={messages}
+}
+
+\newglossaryentry{service}
+{
+  name={service},
+  description={Ein Dienst innerhalb von ROS, der eine Anfrage entgegen nimmt, eine entsprechende Antwort berechnet und zurück gibt},
+  plural={services}
+}
+
+\newglossaryentry{catkin}
+{
+  name={catkin},
+  description={Standard ROS Buildtool. Catkin ist eine Sammlung aus CMake Makros und Python Code die das Compilen von ROS-Packages sehr vereinfachen}
+}
+
+\newglossaryentry{package}
+{
+  name={package},
+  plural={packages},
+  description={Software in ROS ist in packages organisiert. Packages können \Glspl{node}, Libraries, Konfigurationsdateien oder andere module für ROS enthalten. Ein package stellt üblicherweise einen Funktionsblock da, um so einfach von den Benutzern eingebunden werden zu können}
+}
+
+\newglossaryentry{patch file}
+{
+  name={patch file},
+  plural={patch files},
+  description={Patch-Dateien enthalten Änderungen die von dem Programm Patch auf Dateien angewandt werden können}
+}
+
+\newglossaryentry{commit}
+{
+  name={commit},
+  plural={commits},
+  description={Ein Commit stellt bei Git einen Stand der Software da, der in ein \Gls{repository} gespeichert wird. Auf jeden so gespeicherten Stand kann man später zurückkehren um neuere Änderungen zu verwerfen}
+
+\newglossaryentry{branch}
+{
+  name={branch},
+  plural={branches},
+  description={Ein branch ist ein Zweig in der \Gls{commit}-History}
+}
+
+\newglossaryentry{git repository}
+{
+  name={git repository},
+  plural={git repositories},
+  description={Ein repository ist eine Kopie der gesamten lokalen Git-History auf Github}
+}
+
+\newglossaryentry{merge}
+{
+  name={merge},
+  description={Zusammenführen von zwei \Glspl{branch}}
+}
+
+\newglossaryentry{pull request}
+{
+  name={pull request},
+  plural={pull requests},
+  description={Anfrage an den Administrator eines Github \Gls{repository} zum einbringen der Änderungen auf einem eigenen \Gls{fork} dieses \Gls{repository}}
+}
+
+\newglossaryentry{feature}
+{
+  name={feature},
+  plural={features},
+  description={Ein feature ist eine Funktion oder Bestandteil eine Programmes}
+}
+
+\newglossaryentry{fork}
+{
+  name={fork},
+  plural={forks},
+  description={Ein fork ist bei GitHub die Kopie eines \Gls{repository}s von einem anderen Benutzer. Mann erstellt diesen üblicherweise um Änderungen in den aktuellen Softwarestand einzubringen}
+}
+
+\newglossaryentry{source code}
+{
+  name={source code},
+  description={Quellcode aus dem ein Programm beim kompilieren erstellt wird}
+}
+
+\newglossaryentry{catkin workspace}
+{
+  name={catkin workspace},
+  plural={catkin workspaces},
+  description={Ein catkin workspace ist ein Ordner in dem Catkin-Packages (das verbreitetste Format für \Glspl{package} ab ROS Hydro) gespeichert, gebaut und installiert werden}
+}
+
+\newglossaryentry{rosdep}
+{
+  name={rosdep},
+  description={Ein ROS-Utility dass automatisch die notwendigen Abhängigkeiten aus den Ubuntu Software-Quellen installiert}
+}
+
+\newglossaryentry{dependencie}
+{
+  name={dependencie},
+  plural={dependencies},
+  description={Abhängigkeit, ein Programm dass zum kompilieren oder zum starten eines anderen Programms benötigt wird}
+}
+
+\newglossaryentry{rosbag}
+{
+  name={rosbag},
+  description={Rosbag ist ein ROS-Package das zum aufnehmen und abspielen synchronisierter Daten dient. Mann kann festlegen aus welchen \Glspl{topic} die Daten aufgenommen werden sollen, oder man kann die gesamten Topics aufnehmen. Beim abspielen ermöglicht rosbag die Geschwindigkeit und viele weitere Parameter einzustellen. Ausserdem ermöglicht rosbag die Daten wärend der Aufname zu komprimieren.}
+}
+
+\newglossaryentry{roslaunch}
+{
+  name={roslaunch},
+  description={Das Tool roslaunch ermöglicht das gleichzeitige starten von mehreren ROS \Glspl{node} und das setzen von Parametern auf dem \emph{ROS Parameter Server}. Die zu startenden \Glspl{node} und Parameter werden in \emph{launchfiles} festgelegt die als Start-Argument an roslaunch gegeben werden. }
+}
+
+\newglossaryentry{LGPL}
+{
+  name={LGPL},
+  description={Die GNU Lesser General Public License oder LGPL (ehemals GNU Library General Public License) ist eine von der Free Software Foundation (FSF) entwickelte Lizenz für Freie Software. Die LGPL erlaubt den Entwicklern und Firmen das Verwenden und Einbinden von LGPL-Software in eigene (sogar proprietäre) Software, ohne durch ein starkes Copyleft gezwungen zu sein, den Quellcode der eigenen Software-Teile offenzulegen. Lediglich das Ändern der LGPL-Software-Teile muss Endnutzern ermöglicht werden: Deshalb werden im Falle von proprietärer Software die LGPL-Teile meist in Form einer dynamischen Programmbibliothek (z. B. DLL) verwendet, um so die notwendige Trennung zwischen proprietären und quelloffenen LGPL-Teilen zu ermöglichen}
+}
+
+\newglossaryentry{odometrie}
+{
+  name={odometrie},
+  description={Odometrie bezeichnet eine Methode der Schätzung von Position und Orientierung eines mobilen Systems anhand der Daten seines Vortriebsystems. Durch Räder angetriebene Systeme benutzen dafür die Anzahl der Radumdrehungen, während laufende Systeme die Anzahl ihrer Schritte verwenden}
+}
+
+\newglossaryentry{rviz}
+{
+  name={rviz},
+  description={Rviz ist das 3D Visualisierungstool für \emph{ROS}. RViz bietet die Möglichkeit Simulationen und deren Umgebungen zu visualisieren. Dies geschieht dadurch, dass RViz zu einem \Gls{topic} subscribed und abhängig von der Art der Daten diese in einer GUI wiedergibt. Zum Beispiel können Wände, die entweder durch Scans oder vorherige Übergabe einer Karte bekannt sind, als Linien visualisiert werden. Linien, Punkte, Polygone, Punktwolken und noch viele mehr werden durch eine Struktur im \emph{ROS}-Framework dargestellt, welche sich Marker nennt. RViz erhält durch ein Topic Informationen zu einem bestimmten Punkt mit den Koordinaten X und Y.
+Wenn diese als Marker deklariert wurden, werden sie in RViz durch einen Punkt visualisiert}
+}
+
+\newglossaryentry{Eclipse IDE}
+{
+  name={Eclipse IDE},
+  description={Eclipse ist ein quelloffenes Programmierwerkzeug zur Entwicklung von Software verschiedenster Art. Ursprünglich wurde Eclipse als integrierte Entwicklungsumgebung (IDE) für die Programmiersprache Java genutzt, aber mittlerweile wird es wegen seiner Erweiterbarkeit auch für viele andere Entwicklungsaufgaben eingesetzt. Für Eclipse gibt es eine Vielzahl sowohl quelloffener als auch kommerzieller Erweiterungen}
+}
+
+\newglossaryentry{debug}
+{
+  name={debug},
+  description={Debugging ist das suchen nach Fehlern in einem Programm }
+}
+
+\newglossaryentry{log}
+{
+  name={log},
+  description={Ein log besteht aus den gesamten Ausgaben während der Laufzeit eines Programms}
+}
+
+\newglossaryentry{gridmap}
+{
+  name={gridmap},
+  plural={gridmaps},
+  description={Eine gridmap ist ein Array in dem jede Stelle einen bestimmeten Wert annimmt, bei Occupancy Gridmaps bezieht sich dieser auf die Warscheinlichkeit mit der die Zelle belegt ist. Gridmaps werden meistens als Bilddateien gespeichert}
+}

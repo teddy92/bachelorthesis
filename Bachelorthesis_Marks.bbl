@@ -1,0 +1,49 @@
+\begin{thebibliography}{}
+
+\bibitem[{\sc Grisetti} \btxetalshort{.}, 2005]{Grisetti-ICRA-2005}
+{\sc Grisetti, G.}, {\sc C.~Stachniss} \btxandshort{.}\ {\sc W.~Burgard}\
+  (2005).
+\newblock {\em Improving Grid-based SLAM with Rao-Blackwellized Particle
+  Filters by Adaptive Proposals and Selective Resampling\/}.
+\newblock \Btxinshort{.}\ {\em Robotics and Automation, 2005. ICRA 2005.
+  Proceedings of the 2005 IEEE International Conference on\/},
+  \btxpagesshort{.}\ 2432--2437.
+
+\bibitem[{\sc Grisetti} \btxetalshort{.}, 2007]{Grisetti-T-RO-2007}
+{\sc Grisetti, G.}, {\sc C.~Stachniss} \btxandshort{.}\ {\sc W.~Burgard}\
+  (2007).
+\newblock {\em Improved Techniques for Grid Mapping With Rao-Blackwellized
+  Particle Filters\/}.
+\newblock IEEE Transactions on Robotics, 23(1):34--46.
+
+\bibitem[{\sc Quigley} \btxetalshort{.}, 2009]{Quigley-ICRA-2009}
+{\sc Quigley, Morgan}, {\sc K.~Conley}, {\sc B.~P. Gerkey}, {\sc J.~Faust},
+  {\sc T.~Foote}, {\sc J.~Leibs}, {\sc R.~Wheeler} \btxandshort{.}\ {\sc A.~Y.
+  Ng}\ (2009).
+\newblock {\em ROS: an open-source Robot Operating System\/}.
+\newblock \Btxinshort{.}\ {\em ICRA Workshop on Open Source Software\/}.
+
+\bibitem[{\sc Stonier} \btxetalshort{.}]{rocon}
+{\sc Stonier, Daniel}, {\sc J.~Lee} \btxandshort{.}\ {\sc H.~Kim}.
+\newblock {\em Robotics in Concert\/}.
+\newblock [Online] Available: \url{http://www.robotconcert.org}.
+\newblock (2016-03-06).
+
+\bibitem[{\sc Thrun} \btxetalshort{.}]{udacity}
+{\sc Thrun, Sebastian}, {\sc D.~Stavens} \btxandshort{.}\ {\sc M.~Sokolsky}.
+\newblock {\em Udacity: Massive Open Onlice Courses (MOOC)\/}.
+\newblock [Online] Available: \url{www.udacity.com}.
+\newblock (2016-03-06).
+
+\bibitem[{\sc Tiderko}]{multimaster_fkie}
+{\sc Tiderko, Alexander}.
+\newblock {\em multimaster fkie\/}.
+\newblock [Online] Available: \url{http://wiki.ros.org/multimaster\_fkie}.
+\newblock (2016-03-06).
+
+\bibitem[{\sc {van Heesch}}]{doxygen}
+{\sc {van Heesch}, Dimitri}.
+\newblock [Online] Available: \url{http://www.stack.nl/~dimitri/doxygen/}.
+\newblock (2016-03-06).
+
+\end{thebibliography}

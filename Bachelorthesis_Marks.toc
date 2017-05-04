@@ -1,0 +1,20 @@
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Hochschule Heilbronn}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Untersuchte Algorithmen}{1}{section.1.2}
+\contentsline {chapter}{\numberline {2}Inhalt}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}SIFT}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Merkmalsextraktion}{4}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Deskriptorberechnung}{7}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}SURF}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Merkmalsextraktion}{8}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Deskriptorberechnung}{9}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}ORB}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Merkmalsextraktion}{11}{subsection.2.3.1}
+\contentsline {subsubsection}{FAST}{11}{section*.10}
+\contentsline {subsubsection}{Oriented FAST}{13}{section*.12}
+\contentsline {subsection}{\numberline {2.3.2}Deskriptorberechnung}{13}{subsection.2.3.2}
+\contentsline {subsubsection}{BRIEF}{13}{section*.13}
+\contentsline {subsubsection}{Rotated BRIEF}{15}{section*.16}
+\contentsline {chapter}{\numberline {3}Merkmalsextraktion}{17}{chapter.3}
+\contentsline {chapter}{Glossar}{21}{section*.18}
+\contentsline {chapter}{Literaturverzeichnis}{21}{appendix*.19}
