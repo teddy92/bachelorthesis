@@ -15,6 +15,12 @@
 \contentsline {subsection}{\numberline {2.3.2}Deskriptorberechnung}{13}{subsection.2.3.2}
 \contentsline {subsubsection}{BRIEF}{13}{section*.13}
 \contentsline {subsubsection}{Rotated BRIEF}{15}{section*.16}
-\contentsline {chapter}{\numberline {3}Merkmalsextraktion}{17}{chapter.3}
-\contentsline {chapter}{Glossar}{21}{section*.18}
-\contentsline {chapter}{Literaturverzeichnis}{21}{appendix*.19}
+\contentsline {section}{\numberline {2.4}Bruteforce Matcher}{16}{section.2.4}
+\contentsline {section}{\numberline {2.5}Homographie}{17}{section.2.5}
+\contentsline {section}{\numberline {2.6}RANSAC}{18}{section.2.6}
+\contentsline {chapter}{\numberline {3}Merkmalsextraktion}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}Verwendete Software}{19}{section.3.1}
+\contentsline {section}{\numberline {3.2}Hardware}{19}{section.3.2}
+\contentsline {section}{\numberline {3.3}Erstellte Software}{20}{section.3.3}
+\contentsline {chapter}{Glossar}{25}{section*.20}
+\contentsline {chapter}{Literaturverzeichnis}{25}{appendix*.21}

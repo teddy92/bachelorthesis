@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.12)  4 MAY 2017 19:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.12)  16 MAY 2017 19:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1001,7 +1001,7 @@ LaTeX Info: Redefining \nameref on input line 9.
 \openout3 = `Bachelorthesis_Marks.out'.
 
  (./titel.tex
-<img/hhn_logo.png, id=68, 284.5029pt x 93.951pt>
+<img/hhn_logo.png, id=92, 284.5029pt x 93.951pt>
 File: img/hhn_logo.png Graphic file (type png)
  <use img/hhn_logo.png>
 Package pdftex.def Info: img/hhn_logo.png used on input line 15.
@@ -1027,20 +1027,20 @@ Overfull \hbox (24.0pt too wide) in alignment at lines 27--43
 {/home/teddy/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/
 hhn_logo.png>]) [0
 
-] (./Bachelorthesis_Marks.toc)
+] (./Bachelorthesis_Marks.tocpdfTeX warning (ext4): destination with the same i
+dentifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.25 ...tsline {chapter}{Glossar}{25}{section*.20}
+                                                   [1])
 \tf@toc=\write4
 \openout4 = `Bachelorthesis_Marks.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.16     \mainmatter
-                     [1] [2
-
-] (./chapter/einleitung.tex
+ [2]
+(./chapter/einleitung.tex
 Kapitel 1.
 ) (./chapter/inhalt.tex [1
+
 
 ] [2
 
@@ -1053,14 +1053,14 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
 
-<img/scale_space.png, id=121, 886.31125pt x 654.445pt>
+<img/scale_space.png, id=151, 886.31125pt x 654.445pt>
 File: img/scale_space.png Graphic file (type png)
 
 <use img/scale_space.png>
 Package pdftex.def Info: img/scale_space.png used on input line 21.
 (pdftex.def)             Requested size: 263.11113pt x 194.2779pt.
  [3]
-<img/scale_number.png, id=135, 1096.095pt x 420.57124pt>
+<img/scale_number.png, id=165, 1096.095pt x 420.57124pt>
 File: img/scale_number.png Graphic file (type png)
 
 <use img/scale_number.png>
@@ -1071,56 +1071,58 @@ Package pdftex.def Info: img/scale_number.png used on input line 38.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <./img/scale_space.png>]
-<img/sift-octaves.jpg, id=156, 642.4pt x 1027.84pt>
+<img/sift-octaves.jpg, id=187, 642.4pt x 1027.84pt>
 File: img/sift-octaves.jpg Graphic file (type jpg)
  <use img/sift-octaves.jpg>
 Package pdftex.def Info: img/sift-octaves.jpg used on input line 45.
 (pdftex.def)             Requested size: 175.40295pt x 280.64154pt.
 
-[5 <./img/scale_number.png> <./img/sift-octaves.jpg>]
-<img/sift_maxima.png, id=168, 380.42125pt x 322.20375pt>
+Underfull \vbox (badness 1701) has occurred while \output is active []
+
+ [5 <./img/scale_number.png> <./img/sift-octaves.jpg>]
+<img/sift_maxima.png, id=198, 380.42125pt x 322.20375pt>
 File: img/sift_maxima.png Graphic file (type png)
 
 <use img/sift_maxima.png>
 Package pdftex.def Info: img/sift_maxima.png used on input line 60.
 (pdftex.def)             Requested size: 175.40295pt x 148.56458pt.
  [6 <./img/sift_maxima.png>]
-<img/sift_orientation.png, id=178, 882.29625pt x 400.49625pt>
+<img/sift_orientation.png, id=208, 882.29625pt x 400.49625pt>
 File: img/sift_orientation.png Graphic file (type png)
 
 <use img/sift_orientation.png>
 Package pdftex.def Info: img/sift_orientation.png used on input line 86.
 (pdftex.def)             Requested size: 350.8126pt x 159.24232pt.
  [7 <./img/sift_orientation.png>] [8]
-<img/surf_boxfilter.png, id=192, 753.81625pt x 164.615pt>
+<img/surf_boxfilter.png, id=222, 753.81625pt x 164.615pt>
 File: img/surf_boxfilter.png Graphic file (type png)
 
 <use img/surf_boxfilter.png>
 Package pdftex.def Info: img/surf_boxfilter.png used on input line 122.
 (pdftex.def)             Requested size: 394.66pt x 86.18303pt.
  [9 <./img/surf_boxfilter.png>]
-<img/surf_descriptor_expl.png, id=203, 657.45625pt x 260.975pt>
+<img/surf_descriptor_expl.png, id=233, 657.45625pt x 260.975pt>
 File: img/surf_descriptor_expl.png Graphic file (type png)
 
 <use img/surf_descriptor_expl.png>
 Package pdftex.def Info: img/surf_descriptor_expl.png used on input line 155.
 (pdftex.def)             Requested size: 350.8126pt x 139.25587pt.
  [10 <./img/surf_descriptor_expl.png>]
-<img/segment_test.png, id=210, 1365.1pt x 665.48625pt>
+<img/segment_test.png, id=240, 1365.1pt x 665.48625pt>
 File: img/segment_test.png Graphic file (type png)
 
 <use img/segment_test.png>
 Package pdftex.def Info: img/segment_test.png used on input line 173.
 (pdftex.def)             Requested size: 350.8126pt x 171.01175pt.
  [11 <./img/segment_test.png>] [12] [13]
-<img/brief_distribution.png, id=232, 438.63875pt x 325.215pt>
+<img/brief_distribution.png, id=262, 438.63875pt x 325.215pt>
 File: img/brief_distribution.png Graphic file (type png)
 
 <use img/brief_distribution.png>
 Package pdftex.def Info: img/brief_distribution.png used on input line 244.
 (pdftex.def)             Requested size: 263.11113pt x 195.08087pt.
 
-<img/brief_placement_results.png, id=233, 471.7625pt x 261.97874pt>
+<img/brief_placement_results.png, id=263, 471.7625pt x 261.97874pt>
 File: img/brief_placement_results.png Graphic file (type png)
 
 <use img/brief_placement_results.png>
@@ -1131,26 +1133,43 @@ Package pdftex.def Info: img/brief_placement_results.png used on input line 250
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14 <./img/brief_distribution.png>]) (./chapter/merkmalsextraktion.tex [15 <./i
-mg/brief_placement_results.png>] [16
+[14 <./img/brief_distribution.png>] [15 <./img/brief_placement_results.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 297--301
+[]\T1/cmr/m/n/12 Um das Mat-ching der ORB De-skrip-to-ren durch-zu-füh-ren wird
+ von
+ []
 
-]
+[16] <img/hamming.png, id=284, 557.6835pt x 231.264pt>
+File: img/hamming.png Graphic file (type png)
+ <use img/hamming.png>
+Package pdftex.def Info: img/hamming.png used on input line 303.
+(pdftex.def)             Requested size: 263.11113pt x 109.11049pt.
+
+[17 <./img/hamming.png>]) (./chapter/merkmalsextraktion.tex [18]
 Kapitel 3.
-) (./chapter/ergebnisse.tex) (./chapter/ausblick.tex)
-(./chapter/zusammenfassung.tex) [17] [18
+<img/trackbar.png, id=298, 321.2pt x 84.315pt>
+File: img/trackbar.png Graphic file (type png)
+ <use img/trackbar.png>
+Package pdftex.def Info: img/trackbar.png used on input line 26.
+(pdftex.def)             Requested size: 263.11113pt x 69.06796pt.
+ [19
+
+])
+(./chapter/ergebnisse.tex [20 <./img/trackbar.png>]) (./chapter/ausblick.tex)
+(./chapter/zusammenfassung.tex) [21] [22
 
 ] (./Bachelorthesis_Marks.lof)
 \tf@lof=\write5
 \openout5 = `Bachelorthesis_Marks.lof'.
 
- [19
+ [23
 
 ]
-[20
+[24
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 39.
- [21
+ [25
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 39.
@@ -1158,14 +1177,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 39.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 39.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 39.
 Package rerunfilecheck Info: File `Bachelorthesis_Marks.out' has not changed.
-(rerunfilecheck)             Checksum: 89C649E56E6C7FDCC2F2FBB58F00D624;964.
+(rerunfilecheck)             Checksum: 16BD1FBE7942E22C6F7FF6FBB20F6C2C;1326.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 39.
  ) 
 Here is how much of TeX's memory you used:
- 13571 strings out of 493033
- 202968 string characters out of 6133693
- 360396 words of memory out of 5000000
- 16705 multiletter control sequences out of 15000+600000
+ 13603 strings out of 493033
+ 203418 string characters out of 6133693
+ 361396 words of memory out of 5000000
+ 16719 multiletter control sequences out of 15000+600000
  20041 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,12n,68p,1954b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1178,17 +1197,18 @@ Here is how much of TeX's memory you used:
 ome/teddy/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></hom
 e/teddy/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></hom
 e/teddy/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home
-/teddy/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></home/
-teddy/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></home/t
-eddy/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></home/te
-ddy/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></home/ted
-dy/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></home/tedd
-y/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></home/teddy
-/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on Bachelorthesis_Marks.pdf (25 pages, 799583 bytes).
+/teddy/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><
+/home/teddy/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></
+home/teddy/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></h
+ome/teddy/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></ho
+me/teddy/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></hom
+e/teddy/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></home
+/teddy/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></home/
+teddy/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on Bachelorthesis_Marks.pdf (29 pages, 837186 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 298 compressed objects within 3 object streams
- 79 named destinations out of 1000 (max. 500000)
- 184 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 416 PDF objects out of 1000 (max. 8388607)
+ 351 compressed objects within 4 object streams
+ 95 named destinations out of 1000 (max. 500000)
+ 242 words of extra memory for PDF output out of 10000 (max. 10000000)
 
