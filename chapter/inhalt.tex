@@ -1,6 +1,6 @@
 \chapter{Inhalt}
 
-Im laufe dieser Arbeit wurden verschiedene Algorithmen zur lokalen Merkmalsextraktion und Deskriptor Berechnung getestet und ausgewertet.
+Im laufe dieser Arbeit wurden verschiedene Algorithmen zur lokalen Merkmalsextraktion und Deskriptorberechnung getestet und ausgewertet.
 Das Ziel ist hierbei Merkmale zu finden die so gut wie möglich folgenden Ansprüchen genügen und somit als stabil bezeichnet werden:
 \begin{itemize}
 \item \emph{Skaleninvarianz}: Unabhängigkeit von der Größe auf dem Bild (Distanz zur Kamera)
@@ -11,17 +11,17 @@ Das Ziel ist hierbei Merkmale zu finden die so gut wie möglich folgenden Anspr�
 
 \section{SIFT}
 
-Die "Scale Invariant Feature Transform" ist bis heute eine der am erfolgreichsten verwendeten Methoden zur lokalen Merkmalsextraktion. Sie wurde 1999 von David Lowe vorgestellt und ist von der Objekterkennung im menschlichen Gehirn inspiriert.
+Die "Scale Invariant Feature Transform" ist bis heute eine der erfolgreichsten Methoden zur lokalen Merkmalsextraktion. Sie wurde 1999 von David Lowe vorgestellt und ist von der Objekterkennung im menschlichen Gehirn inspiriert.
 
 \subsection{Merkmalsextraktion}
 
-Aus dem zu untersuchenden Bild wird als erstes der sogenannte \Gls{scale-space} berechnet.
+Aus dem zu untersuchenden Bild wird als erstes der sogenannte \emph{scale-space} berechnet.
 
 \begin{figure}[h]
 \includegraphics[width=0.6\textwidth]{scale_space.png}
 \centering
 \end{figure}
-Hierzu wird das Bild mit einem Gauss-Kernel wiederholt geglättet um die \Glspl{scale} der ersten \Gls{octave} zu erstellen.
+Hierzu wird das Bild mit einem Gauss-Kernel wiederholt geglättet um die \emph{scales} der ersten \emph{octave} zu erstellen.
 Um die Gaussgeglätteten Bilder $ L (x, y, \sigma ) $ zu erhalten wird der Gauss-Kernel 
 \begin{equation}
 G(x, y, \sigma) = \frac{1}{2\pi\sigma^{2}}e^{-(x^{2}+y^{2})/2\sigma^{2}}
@@ -31,9 +31,9 @@ G(x, y, \sigma) = \frac{1}{2\pi\sigma^{2}}e^{-(x^{2}+y^{2})/2\sigma^{2}}
 L(x, y, \sigma) = G(x, y, \sigma)\ast I(x, y)
 \end{equation}
 Hiermit werden schrittweise immer mehr kleine Merkmale entfernt, was dazu führt dass größere Merkmale and Bedeutung gewinnen.
-Die Breiten der Gaussfunktionen mit der zwei benachbarte \Glspl{scale} berechnet werden, haben das konstante Verhältnis $ k $, hierdurch sind die \Glspl{scale} im \Gls{scale-space} equidistant in Bezug auf $ \sigma $.
+Die Breiten der Gaussfunktionen mit der zwei benachbarte \emph{scales} berechnet werden, haben das konstante Verhältnis $ k $, hierdurch sind die \emph{scales} im \emph{scale-space} equidistant in Bezug auf $ \sigma $.
 
-Lowe fand experimentell heraus, dass die optimale Anzahl an \Glspl{scale} per \Gls{octave}, in Bezug auf die Wiederholgenauigkeit der Detektion der Merkmale nach verschiedenen Bildtransformationen, 3 beträgt.
+Lowe fand experimentell heraus, dass die optimale Anzahl an \emph{scales} per \emph{octave}, in Bezug auf die Wiederholgenauigkeit der Detektion der Merkmale nach verschiedenen Bildtransformationen, 3 beträgt.
 \begin{figure}[h]
 \includegraphics[width=0.6\textwidth]{scale_number.png}
 \centering
@@ -92,7 +92,7 @@ Die Pixel werden in 4x4 Pixel große Felder unterteilt und innerhalb dieser werd
 Die \emph{Deskriptoren} werden als Vektoren gespeichert, die alle $4x4x8=128$ Werte der \"bins\" der Histogramme enthalten. 
 Die Merkmale sind gegen Helligkeitsveränderungen die gleichermaßen alle Pixel aus denen sie berechnet wurden betreffen stabil, da die Gradienten durch Differenzen gebildet werden.
 Um Stabilität gegen Kontrastveränderungen zu erreichen wird der Merkmalsvektor normiert.
-Um den Einfluss von nicht linearen Helligkeitsveränderungen zu verringern, werden alle Werte des Vektors die Größer als 0.2 sind auf diesen Wert gesetzt. Anschließend wird der Vektor nochmals normiert.
+Um den Einfluss von nicht linearen Helligkeitsveränderungen zu verringern, werden alle Werte des Vektors die Größer als 0.2 sind auf diesen Wert gesetzt. Anschließend wird der Vektor nochmals normiert. \cite{lowe99}
 
 
 \section{SURF}
@@ -156,7 +156,8 @@ Wie diese Methode eine Charakterisierende Beschreibung für das Umfeld eines Mer
 \centering
 \end{figure}
 
-Wie auch der Merkmalsvektor bei SIFT, ist dieser bei SURF invariant gegenüber globalen Beleuchtungsveränderungen. Auch hier wird eine Kontrastinvarianz durch die Normierung erzielt.
+Wie auch der Merkmalsvektor bei SIFT, ist dieser bei SURF invariant gegenüber globalen Beleuchtungsveränderungen. Auch hier wird eine Kontrastinvarianz durch die Normierung erzielt. 
+\cite{bay08}
 
 \section{ORB}
 
@@ -271,7 +272,7 @@ Anschließend wird die der Orientierung $\Theta $ des Merkmals entsprechende Rot
 S_\Theta = R_\Theta \cdot S
 \end{equation}
 $\Theta$ wird auf Abschnitte mit einer Breite von $\dfrac{2\pi}{30}$ diskretisiert und es wird eine Lookup-Tabelle mit den Positionen der zu testenden Punkte für jeden Diskretisierungsschritt im fertigen Programm hinterlegt.
-Somit lassen sich die rotationsunabhängigen Deskriptoren praktisch genauso schnell wie die rotationsabhängigen berechnen.
+Somit lassen sich die rotationsunabhängigen Deskriptoren praktisch genauso schnell wie die rotationsabhängigen berechnen. \cite{rub11}
 
 \section{Bruteforce Matcher}
 Der \emph{Bruteforce Matcher} ist ein von Opencv bereitgestelltes Werkzeug um Übereinstimmungen zwischen extrahierten Merkmalen zu finden. 
@@ -297,14 +298,15 @@ wobei $|x_k|$ der Betrag der komplexen Zahl $x_k$ ist und somit für Deskriptore
 Um das Matching der ORB Deskriptoren durchzuführen wird von \emph{NORM\_HAMMING1} gebrauch gemacht.
 Es handelt sich nicht um eine Vektor-Norm im engen Sinn wird aber manchmal als eine solche bezeichnet.
 Diese Größe ist auch als \emph{Hamming Distanz} bekannt und ist die Anzahl unterschiedlicher Bits in zwei gleich langen Bit-Ketten.
-Hierzu werden alle Positionen in den zwei Ketten stellenweise verglichen und falls die Werte nicht übereinstimmen die \emph{Hamming Distanz} um 1 erhöht.
+Hierzu werden alle Positionen in den zwei Ketten stellenweise verglichen und falls die Werte nicht übereinstimmen die \emph{Hamming Distanz} um 1 erhöht. 
 
 \begin{figure}[h]
 \includegraphics[width=0.6\textwidth]{hamming.png}
 \centering
 \end{figure}
 
-Diese Operation kann mit minimalen Kosten berechnet werden da es genügt die beiden Bit-Ketten mit einem \emph{XOR} Operator zu vergleichen und die positiven Bits zu zählen.
+Diese Operation kann mit minimalen Kosten berechnet werden da es genügt die beiden Bit-Ketten mit einem \emph{XOR} Operator zu vergleichen und die positiven Bits zu zählen. \cite{cvman}
+
 \section{Homographie}
 Homographie ist der mathematische Zusammenhang von zwei 2-Dimensionalen Abbildungen eines 3-Dimensionalen Objekts.
 Die Berechnung um diese zu finden wird in $P^2$, der homogenen Darstellung, durchgeführt.
@@ -330,7 +332,8 @@ P =
 
 Hartley und Zisserman bezeichnen die Homographie wie folgt\:
 
-Ein Zusammenhang von $\mathbb{P}^2 \quad \rightarrow \quad \mathbb{P}^2$ ist eine Homographie wenn eine nicht singuläre 3x3 Matrix $H$ existiert sodass aus jedem Punkt $x$ der zusammenhängende als $Hx$ berechnet werden kann.
+Ein Zusammenhang von $\mathbb{P}^2 \quad \rightarrow \quad \mathbb{P}^2$ ist eine Homographie wenn eine nicht singuläre 3x3 Matrix $H$ existiert sodass aus jedem Punkt $x$ der zusammenhängende als $Hx$ berechnet werden kann. \cite{harzis}
+
 \section{RANSAC}
 \emph{Random Sample Consensus} ist ein Algorithmus um die Übereinstimmung von einem mathematischen Modell mit Testdaten zu überprüfen und somit das sogenannte Matching durchzuführen.
 Das zuvor verbreitete Matchingverfahren \emph{Least Median of Squares Regression} berücksichtigte für die Auswertung die Gesamtheit der Testdaten und konnte somit nur auf Testdaten mit einem Ausreißeranteil der kleiner als 50\% ist angewandt werden.
@@ -345,3 +348,4 @@ Hierbei ergeben sich drei Parameter für RANSAC:
 \item \emph{Anzahl der Iterationen}
 \item \emph{Mindestanzahl der Punkte in einem Consesus Set}
 \end{itemize}
+\cite{fis80}

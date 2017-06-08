@@ -4,7 +4,7 @@
 
 Um die verschiedenen Verfahren zur Merkmalsextraktion zu vergleichen wurde ein Programm in C++ erstellt.
 Also Entwicklungsumgebung wurde die freie und quellenoffene Software Eclipse verwendet.
-Die genutzten Implementierungen der Bildverarbeitungsalgorithmen stammen aus der Bibliothek OpenCV. Hierbei handelt es sich um eine unter der BSD Lizenz veröffentlichten Software die sehr viele Methoden zur Bildverarbeitung und Maschinellem sehen enthält.
+Die genutzten Implementierungen der Bildverarbeitungsalgorithmen stammen aus der Bibliothek OpenCV. Hierbei handelt es sich um eine unter der BSD Lizenz veröffentlichten Software die sehr viele Methoden zur Bildverarbeitung und Maschinellem sehen enthält. \cite{cvlib}
 
 \section{Hardware}
 
@@ -39,3 +39,40 @@ Dies wird anhand der Methoden \emph{detect} und \emph{compute} der Klassen \emph
 Falls bei diesem Schritt ein Fehler auftritt muss das betroffene Objekt in Form des zugehörigen Bildes, der Keypoints und der Deskriptoren aus den jeweiligen Vektoren gelöscht werden.
 Dies ist insbesondere wichtig da die zu einem Objekt gehörenden Daten nur durch die Stelle in den Vektoren zusammenhängen.
 Nachdem die Merkmale aus den Objektbildern extrahiert wurden, springt das Programm in eine nur durch die Beendung des Programms unterbrechbare Endlosschleife in der die aktuellen Frames der Webcam bearbeitet werden.
+Das neueste Frame wird in Form eines Mat-Objekts erfasst und, wie die Bilder der darzustellenden Objekte, wird auch dieses in ein Graustufenbild verwandelt um anschließend die Merkmale in Form von Keypoints und Deskriptoren zu extrahieren.
+Nachdem nun alle Merkmale aus den Objekt-Bildern und aus dem aktuellen Frame vorhanden sind, gilt es das Set aus Merkmalen jedes Objekts mit jenen des neuesten Frames zu vergleichen um mögliche Übereinstimmungen zu finden.
+Hierzu wird als erstes von dem BruteForceMatcher (BFMatcher) aus OpenCV gebrauch gemacht. Dieser berechnet die Übereinstimmung der Merkmale anhand der Deskriptoren.
+Da dieser aber noch viele falsche Matches ausgibt, werden diese anschließend noch anhand der von Lowe vorgestellten Methode gefiltert.
+Es werden nur Matches bei denen das Verhältnis der Deskriptordistanzen (wie in 2.4 beschrieben, sagt diese Distanz aus wie unterschiedlich zwei Deskriptoren sind) des zweitbesten zum erstbesten Match kleiner als ein bestimmter Wert (in unserem Fall 0.9) sind beibehalten. 
+Dies bedeutet in der Praxis dass es nur einen wahrscheinlichen Kandidaten für das Matching gibt und somit die Wahrscheinlichkeit einer Fehlzuweisung gering ist.
+Die so erhaltenen Matches werden anschließend mit der OpenCV Funktion \emph{drawMatches} in das Bild eingezeichnet.
+\begin{figure}[h]
+\includegraphics[width=0.8\textwidth]{matching.png}
+\centering
+\end{figure}
+Anschließend wird aus den gefundenen Matches die Homographie, welche die Ausrichtung des gefundenen Objekts zu dessen hinterlegtem Bild beschreibt, berechnet.
+Hierzu wird die OpenCV-Funktion \emph{findHomography} verwendet. Beim Aufruf dieser Funktion wird der Parameter \emph{method} übergeben, durch welchen man festlegen kann ob die Homographie herkömmlich berechnet wird oder mit Hilfe von RANSAC oder Least-Median die Ausreißer rausgefiltert werden.
+Da die Punktemenge der wiedererkannten Keypoints aus der die Homographie ermittelt wird typischerweise Falschzuordnungen enthält, kommt die herkömmliche Methode nicht in Frage.
+Bei Versuchen mit den beiden letzteren Methoden ergab sich RANSAC als die stabilere Variante und wird somit hier verwendet.
+Mit der gefundenen Homographie-Matrix kann anschließend die Position des Objekts im aktuellen Frame ermittelt werden. Hierzu werden die Eck-punkte der hinterlegten Abbildung in einen Vektor gespeichert und samt der Homographie an die Funktion \emph{perspectiveTransform} übergeben. Diese liefert die Position der Eckpunkte im Frame, hierdurch ist die aktuelle Lage des Objekts bestimmt.
+Mit Hilfe der Funktion \emph{line} wird eine Box um das gefundene Objekt gezeichnet.
+\begin{figure}[h]
+\includegraphics[width=0.8\textwidth]{homography.png}
+\centering
+\end{figure}
+
+\subsection{GPU Beschleunigung}
+
+Da die hier verwendeten Algorithmen zum Teil sehr rechenintensiv sind und auf dem Test-Laptop nicht alle Frames der Webcam verarbeitet werden konnten, wurde die Berechnung eines Teils der Operationen auf die GPU verlagert.
+Dank der CUDA Bibliothek von NVIDIA und den Implementierungen der Bildverarbeitungsalgorithmen aus OpenCV die auf dieser basieren ist das relativ leicht zu realisieren.
+Um die Bibliotheken nutzen zu können muss OpenCV samt den Plugins des \emph{contrib} Repository aus dem Quellcode kompiliert werden.
+Zusätzlich zu den der üblichen \emph{Mat}, müssen hier \emph{cuda::GpuMat} Klassen verwendet werden.
+Diese werden mit dem \emph{Mat} Bild initialisiert, somit wird dieses auf die Grafikkarte kopiert und es wird in der \emph{GpuMat} ein Pointer auf dieses gespeichert.
+Anschließend können die Klassen \emph{cuda\:\:SURF\_CUDA} und \emph{cuda\:\:ORB} verwendet werden um die Berechnungen durchzuführen.
+Für SIFT gibt es keine CUDA Implementierung, vermutlich aus patentrechtlichen Gründen.
+Daher wurde versucht die SIFT Implementierung \emph{CudaSift} des Github Benutzers \emph{Celebrandil} in das Programm einzubauen.
+Leider ist es nicht gelungen die Ausgangsschnittstellen dieser Bibliothek mit mit dem restlichen Programm zu verknüpfen.
+
+\subsection{Benchmark}
+
+Um die verschiedenen Methoden zu vergleichen wurden verschiedene Tests durchgeführt.

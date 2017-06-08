@@ -1,14 +1,23 @@
 \chapter{Einleitung}
-\section{Hochschule Heilbronn}
+\section{Motivation}
 
-\section{Untersuchte Algorithmen}
-
-Die Bilddatenverarbeitung (BDV) gewinnt in unserem technologischem Zeitalter immer mehr an Bedeutung. 
+Die Bilddatenverarbeitung gewinnt in unserem technologischem Zeitalter immer mehr an Bedeutung. 
 Durch die Verbreitung der Automatisierung in den meisten industriellen und sozialen Umfeldern werden immer neue und effizientere Methoden zur Datenverarbeitung benötigt.
 Eine der größten Herausforderungen bei Autonomen Systemen ist die Erfassung der Umgebung um Interaktionen mir dieser, oder kollisionsfreihe Bewegungen zu ermöglichen. 
 Zu diesem Zweck werden unter anderem Kameras verwendet.
-Diese haben den Vorteil dass sie für viele verschiedene Aufgaben einsetzbar sind da sie eine enorme Menge an Daten sammeln. 
-Allerdings werden sehr komplexe Algorithmen benötigt um aus diesen Daten Informationen wie die Art oder Position eines Objekts zu ermitteln. 
-Ein Ansatz hierzu ist die Bestimmung von Punkten im Bild die bei möglichst vielen Lichtverhältnissen und aus unterschiedlichen Blickwinkeln erkannt werden können.
-Durch die Anordnung dieser lokalen Merkmale kann man das Objekt lokalisieren und mittels eines Abgleichs mit einer vorher erstellten Datenbank kann man ein Objekt wiedererkennen.
+Diese haben den Vorteil dass sie für ein sehr breites Spektrum an Aufgaben einsetzbar sind da sie eine enorme Menge an Daten sammeln.
+Dies hat jedoch zur Folge dass sehr komplexe Algorithmen benötigt werden um die relevanten Informationen, wie die Art oder Position eines Objekts, zu extrahieren.
+Als die ersten Steine des heutigen Wissens in diesem Bereich gelegt wurden war die Leistungsfähigkeit der Computer das größte Problem.
+Da die Entwicklung schnellerer und günstigerer Recheneinheiten (Prozessoren und Grafikkarten) seit dem sehr große Schritte gemacht hat und weiter machen wird, sind der Verbreitung dieser Technologie immer weniger Grenzen gesetzt.
+Außerdem steigt auch die Verbreitung von Handys mit äußerst leistungsstarken Kameras immer mehr und ermöglicht somit neue Anwendungsbereiche dieser Technologie im Alltag.
+
+\section{Untersuchte Algorithmen}
+
+Es gibt verschiedene Ansätze der Bildverarbeitung, auch abhängig von dem voraussichtlichen Anwendungsgebiet.
+Neben dem Morphologischen und dem neuesten Ansatz des Deep Learnings wird vor allem die Merkmalsbasierte Bildverarbeitung genutzt.
+Dieser besteht besteht in der Bestimmung von Punkten im Bild die bei möglichst vielen Lichtverhältnissen und aus unterschiedlichen Blickwinkeln wiedererkannt werden können.
+Durch die Anordnung dieser lokalen Merkmale kann ein Objekt anhand einer Datenbank aus solchen Mustern wiedererkannt und lokalisiert werden.
+Zu dieser Sparte der Bildverarbeitung gehören unter anderen die in dieser Arbeit analysierten Algorithmen.
+Die Einführung des \emph{Scale-invariant feature transform} (SIFT) war ein sehr großer Schritt in der Entwicklung dieses Bereichs und ermöglichte somit die Verbreitung der Bildverarbeitung in industriellen Umgebungen.
+Die anderen hier untersuchten Algorithmen, \emph{SURF} und \emph{ORB}, sind mehr oder weniger eine Ableitung von \emph{SIFT} und sind vor allem ein versuch die Kosten der Berechnung zu mindern um diese Technologie echtzeitfähig zu machen und den Einsatz auf weniger performanten Geräten zu ermöglichen.
 

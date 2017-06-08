@@ -1,0 +1,10 @@
+\chapter{Ausblick}
+
+Die Ergebnisse zeigen dass sich die untersuchten Algorithmen zufriedenstellend für die Klassifizierung von bekannten Objekten eignen.
+Um diese aber mit genügender Genauigkeit zu lokalisieren sind zumindest SURF und ORB nicht ausreichend.
+Auch mit SIFT wird in manchen Situationen die Orientierung der Objekte nicht genau erkannt.
+Um die Detektion und die Lokalisierung der Objekte zu stabilisieren könnte ein Kalman-Filter implementiert werden.
+Dieser verwendet ein Bewegungsmodell welches von der Natur der Objekte und/oder der Bewegung der Kamera abhängt.
+Im Zusammenspiel mit den Messungen der Position durch den in dieser Arbeit beschriebenen Prozess und der zu erwartenden Ungenauigkeit schätzt der Filter die aktuelle Position der Objekte.
+Dies hat den Vorteil dass das Ergebnis nicht nur von der aktuellen Messung sondern auch von den vorherigen abhängt und somit das Rauschen der Messungen kompensiert werden kann.
+

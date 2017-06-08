@@ -1,6 +1,6 @@
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Hochschule Heilbronn}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Untersuchte Algorithmen}{1}{section.1.2}
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Untersuchte Algorithmen}{2}{section.1.2}
 \contentsline {chapter}{\numberline {2}Inhalt}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}SIFT}{3}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Merkmalsextraktion}{4}{subsection.2.1.1}
@@ -22,5 +22,16 @@
 \contentsline {section}{\numberline {3.1}Verwendete Software}{19}{section.3.1}
 \contentsline {section}{\numberline {3.2}Hardware}{19}{section.3.2}
 \contentsline {section}{\numberline {3.3}Erstellte Software}{20}{section.3.3}
-\contentsline {chapter}{Glossar}{25}{section*.20}
-\contentsline {chapter}{Literaturverzeichnis}{25}{appendix*.21}
+\contentsline {subsection}{\numberline {3.3.1}GPU Beschleunigung}{22}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Benchmark}{23}{subsection.3.3.2}
+\contentsline {chapter}{\numberline {4}Ergebnisse}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Laufzeit}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}Anzahl der korrekten Matches}{26}{section.4.2}
+\contentsline {section}{\numberline {4.3}Stabilit\IeC {\"a}t gegen Rotation}{27}{section.4.3}
+\contentsline {section}{\numberline {4.4}Stabilit\IeC {\"a}t gegen Skalierung}{27}{section.4.4}
+\contentsline {section}{\numberline {4.5}Stabilit\IeC {\"a}t der Lokalisierung}{28}{section.4.5}
+\contentsline {section}{\numberline {4.6}Testvideos}{30}{section.4.6}
+\contentsline {chapter}{\numberline {5}Ausblick}{33}{chapter.5}
+\contentsline {chapter}{\numberline {6}Zusammenfassung}{35}{chapter.6}
+\contentsline {chapter}{Glossar}{39}{section*.22}
+\contentsline {chapter}{Literaturverzeichnis}{39}{appendix*.23}
